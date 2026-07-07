@@ -2,12 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/klassico-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Klassico Inks — Leading manufacturer of industrial liquid inks for flexible packaging. Rotogravure and flexographic inks for PET, BOPP, PE, and more." />
+    <meta property="og:title" content="Klassico Inks - Precision in Every Drop" />
+    <meta property="og:description" content="High-performance Rotogravure and Flexographic inks tailored for the modern packaging industry." />
+    <meta property="og:type" content="website" />
     <title>Klassico Inks - Precision in Every Drop</title>
+
+    <!--
+      Google Analytics 4 — uncomment and replace G-XXXXXXXXXX with your Measurement ID:
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+      </script>
+    -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Hidden forms for Netlify build-time detection (required for SPA) -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <input type="text" name="product" />
+      <textarea name="message"></textarea>
+    </form>
+    <form name="newsletter" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+    </form>
   </body>
 </html>

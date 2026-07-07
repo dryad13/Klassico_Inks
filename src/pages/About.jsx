@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Award, Users, Globe, PenTool, Target, History, Quote } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-slate-900 pb-20">
+      <SEO
+        title="About"
+        description="Learn about Klassico Inks — a legacy of excellence in liquid ink manufacturing under Mahmood Brothers, serving Pakistan's packaging industry."
+        path="/about"
+      />
       <div className="bg-slate-950 py-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 

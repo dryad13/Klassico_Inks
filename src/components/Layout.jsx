@@ -1,13 +1,16 @@
-import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import WhatsAppFab from './WhatsAppFab';
+import { trackPageView } from '../utils/analytics';
 
 const Layout = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    trackPageView(pathname);
   }, [pathname]);
 
   return (
@@ -17,6 +20,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Microscope, Settings, Award, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Infrastructure = () => {
   const labEquipment = [
@@ -17,6 +18,11 @@ const Infrastructure = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 pb-20">
+      <SEO
+        title="Infrastructure & Quality"
+        description="World-class manufacturing facilities and state-of-the-art QC lab at Klassico Inks. ISO 9001, OHSAS 18001, and Halal certified."
+        path="/infrastructure"
+      />
       <div className="bg-slate-950 py-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
