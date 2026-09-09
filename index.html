@@ -1,40 +1,89 @@
 <!doctype html>
+
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
+
     <link rel="icon" type="image/png" href="/klassico-logo.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Klassico Inks — Leading manufacturer of industrial liquid inks for flexible packaging. Rotogravure and flexographic inks for PET, BOPP, PE, and more." />
+
+    <meta name="description" content="Klassico Inks — Leading manufacturer of industrial printing inks — rotogravure, flexographic, water-based, and offset — plus solvents, pigments, resins, and related raw materials." />
+
     <meta property="og:title" content="Klassico Inks - Precision in Every Drop" />
-    <meta property="og:description" content="High-performance Rotogravure and Flexographic inks tailored for the modern packaging industry." />
+
+    <meta property="og:description" content="High-performance rotogravure, flexographic, water-based, and offset inks — plus solvents and raw materials — for the modern packaging industry." />
+
     <meta property="og:type" content="website" />
+
     <title>Klassico Inks - Precision in Every Drop</title>
 
-    <!--
-      Google Analytics 4 — uncomment and replace G-XXXXXXXXXX with your Measurement ID:
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-      </script>
-    -->
+
+
+    <!-- Self-hosted fonts: preload critical faces, then blocking CSS (font-display: block) -->
+
+    <link rel="preload" href="/fonts/Oswald-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="preload" href="/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="preload" href="/fonts/Inter-500.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="stylesheet" href="/fonts.css" />
+
+    <style>
+
+      html {
+
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+
+        font-family: Oswald, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+        letter-spacing: 0.025em;
+
+      }
+
+    </style>
+
   </head>
+
   <body>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
 
+
+
     <!-- Hidden forms for Netlify build-time detection (required for SPA) -->
+
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+
       <input type="text" name="name" />
+
       <input type="email" name="email" />
+
       <input type="text" name="subject" />
+
       <input type="text" name="product" />
+
       <textarea name="message"></textarea>
+
     </form>
+
     <form name="newsletter" netlify netlify-honeypot="bot-field" hidden>
+
       <input type="email" name="email" />
+
     </form>
+
   </body>
+
 </html>
+
+

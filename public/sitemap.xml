@@ -3,14 +3,24 @@
   <url><loc>https://klassicoinks.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://klassicoinks.com/products</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://klassicoinks.com/products/lam-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://klassicoinks.com/products/super-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://klassicoinks.com/products/surface-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/h-lam-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/pel-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/max-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://klassicoinks.com/products/peak-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://klassicoinks.com/products/pivotal-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://klassicoinks.com/products/pvc-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/kwb-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/dgi-series</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/rotogravure-inks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/flexographic-inks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/water-based-inks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/offset-inks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/solvents-blends</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/pigments</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/titanium-dioxide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/resins</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/nitrocellulose</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://klassicoinks.com/products/solvent-dyes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://klassicoinks.com/infrastructure</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://klassicoinks.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://klassicoinks.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://klassicoinks.com/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://klassicoinks.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

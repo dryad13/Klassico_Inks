@@ -22,10 +22,20 @@ export default {
           400: '#14521f', // Lighter for visibility if needed
           900: '#051608',
         },
+        // v2-only palette — do not use in v1 components
+        ki: {
+          orange: '#F6931E',
+          green: '#136B43',
+          magenta: '#E53693',
+          yellow: '#FAE100',
+          paper: '#F7F5EF',
+          ground: '#0f172a',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Oswald', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
     },
   },

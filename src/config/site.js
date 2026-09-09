@@ -1,17 +1,17 @@
 export const SITE_NAME = 'Klassico Inks';
 export const SITE_URL = 'https://klassicoinks.com';
 export const SITE_DESCRIPTION =
-  'Leading manufacturer of industrial liquid inks for flexible packaging. Rotogravure and flexographic inks for PET, BOPP, PE, and more.';
+  'Leading manufacturer of industrial printing inks — rotogravure, flexographic, water-based, and offset — plus solvents, pigments, resins, and related raw materials.';
 
-export const PHONE_MOBILE = '+923452099683';
-export const PHONE_MOBILE_DISPLAY = '+92 345 209 9683';
+export const PHONE_MOBILE = '+923268413506';
+export const PHONE_MOBILE_DISPLAY = '+92 326 8413506';
 export const PHONE_OFFICE = '+922132586200';
 export const PHONE_OFFICE_DISPLAY = '(92-21) 32586200-3';
 
 export const EMAIL_PRIMARY = 'danyalsalam@klassicoinks.com';
 export const EMAIL_SALES = 'sales@mahmoodbrothers.com.pk';
 
-export const WHATSAPP_NUMBER = '923452099683';
+export const WHATSAPP_NUMBER = '923268413506';
 export const WHATSAPP_MESSAGE = encodeURIComponent(
   'Hello Klassico Inks, I would like to inquire about your printing ink solutions.'
 );

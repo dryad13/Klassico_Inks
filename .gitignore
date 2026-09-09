@@ -6,3 +6,8 @@ dist
 *.log
 .env
 .env.*
+.gstack/
+.tmp/
+
+# Unsorted source photos dropped in the repo root
+WhatsApp Image *.jpeg

@@ -2,6 +2,47 @@
   command = "npm run build"
   publish = "dist"
 
+# Vite fingerprints everything in /assets, so it can be cached forever.
+# Without this Netlify revalidates each file on every repeat visit.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The HTML entry point is not fingerprinted and must never be cached, or
+# visitors keep loading the old asset manifest after a deploy.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect dropped product slugs to the catalog
+[[redirects]]
+  from = "/products/super-series"
+  to = "/products"
+  status = 301
+
+[[redirects]]
+  from = "/products/pivotal-series"
+  to = "/products"
+  status = 301
+
+[[redirects]]
+  from = "/products/pvc-series"
+  to = "/products"
+  status = 301
+
+[[redirects]]
+  from = "/products/surface-series"
+  to = "/products"
+  status = 301
+
+# SPA fallback — must be last
 [[redirects]]
   from = "/*"
   to = "/index.html"
