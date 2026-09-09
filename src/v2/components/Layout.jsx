@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -20,7 +20,16 @@ const Layout = () => {
       </a>
       <Navbar />
       <main id="main-content" className="flex-grow pt-16" tabIndex={-1}>
-        <Outlet />
+        {/*
+          The boundary sits here rather than around <Routes> so a loading route
+          chunk only blanks the page body. Wrapping the router put Navbar inside
+          the boundary, and React hides that subtree while a chunk loads — which
+          froze the mobile menu's exit animation mid-flight and left the open
+          panel orphaned in the DOM after every navigation.
+        */}
+        <Suspense fallback={<div className="min-h-screen bg-ki-ground" />}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <WhatsAppFab />

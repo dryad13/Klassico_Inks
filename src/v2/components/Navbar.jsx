@@ -56,6 +56,12 @@ const Navbar = () => {
     };
   }, [location.pathname]);
 
+  // Belt and braces alongside each link's onClick: this also covers browser
+  // back/forward and any navigation not started from a menu tap.
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
@@ -125,9 +131,10 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18, ease: 'easeOut' }}
             className={clsx(
               'lg:hidden border-b',
               overPaper ? 'bg-ki-paper border-ki-green/15' : 'bg-ki-ground border-slate-800'
