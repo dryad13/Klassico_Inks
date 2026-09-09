@@ -21,11 +21,18 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => {
-      const paperSections = document.querySelectorAll('[data-v2-tone="paper"]');
+    // getBoundingClientRect forces a synchronous layout, and scroll can fire
+    // more than once per frame — so this is coalesced into a single rAF pass
+    // rather than run per event. The query stays inside the callback so it
+    // still picks up sections from a lazily-loaded route that mounts after
+    // this effect, but now costs one pass per frame instead of one per event.
+    let queued = false;
+
+    const measure = () => {
+      queued = false;
       const navBottom = 64;
       let paper = false;
-      paperSections.forEach((el) => {
+      document.querySelectorAll('[data-v2-tone="paper"]').forEach((el) => {
         const rect = el.getBoundingClientRect();
         if (rect.top <= navBottom && rect.bottom >= navBottom) {
           paper = true;
@@ -34,7 +41,13 @@ const Navbar = () => {
       setOverPaper(paper);
     };
 
-    onScroll();
+    const onScroll = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(measure);
+    };
+
+    measure();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
     return () => {

@@ -17,8 +17,11 @@ const LIGHT_LERP = 0.12;
 const LIGHT_CHROMA = 2.2;
 const MEASURE_FRAMES = 90;
 const SLOW_FRAME_MS = 20;
+// Sustained sub-30fps. Only consulted once there is no tier left to drop to,
+// where the choice is no longer "cheaper simulation" but "simulation or not".
+const UNPLAYABLE_FRAME_MS = 34;
 
-export default function FluidScene({ quality, lightTargetRef }) {
+export default function FluidScene({ quality, lightTargetRef, onUnplayable }) {
   const { gl, size, camera } = useThree();
   const heroStateRef = useHeroTimeline(quality.reducedMotion);
   const simulationRef = useRef(null);
@@ -159,6 +162,14 @@ export default function FluidScene({ quality, lightTargetRef }) {
         const sorted = [...samples.current].sort((a, b) => a - b);
         const p75 = sorted[Math.floor(sorted.length * 0.75)];
         samples.current = null;
+
+        // Phones start on the lowest tier, so the downgrade below can never
+        // fire for them — without this a struggling handset would simply stay
+        // struggling, with no route back to the CSS fallback.
+        if (p75 > UNPLAYABLE_FRAME_MS && tierRef.current >= TIER_ORDER.length - 1) {
+          onUnplayable?.();
+          return;
+        }
 
         if (p75 > SLOW_FRAME_MS && tierRef.current < TIER_ORDER.length - 1) {
           tierRef.current += 1;

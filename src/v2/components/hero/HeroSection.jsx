@@ -1,4 +1,4 @@
-import { lazy, Suspense, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { supportsFluidHero } from '../../utils/webgl';
 import useHeroQualityTier from './hooks/useHeroQualityTier';
 import PigmentField from './PigmentField';
@@ -28,7 +28,41 @@ export default function HeroSection() {
   // properties inherit, so setting them here reaches HeroContent's type
   // without re-rendering React at 60fps.
   const sectionRef = useRef(null);
-  const useFallback = !canRunFluid || quality.reducedMotion;
+
+  // The simulation is a full GPU fluid solve every frame, and the hero is only
+  // one viewport tall. Without this it keeps running once the visitor scrolls
+  // into the page — burning battery and stealing frames from the scroll itself,
+  // which is most of the cost on a phone. Also stops on a hidden tab, where
+  // rAF throttling alone still leaves work queued.
+  const [active, setActive] = useState(true);
+  // Set when the simulation measures itself as unplayable on the lowest tier.
+  const [gaveUp, setGaveUp] = useState(false);
+
+  const useFallback = !canRunFluid || quality.reducedMotion || gaveUp;
+
+  useEffect(() => {
+    if (useFallback) return undefined;
+    const el = sectionRef.current;
+    if (!el) return undefined;
+
+    let onScreen = true;
+    const sync = () => setActive(onScreen && !document.hidden);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        onScreen = entry.isIntersecting;
+        sync();
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    document.addEventListener('visibilitychange', sync);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', sync);
+    };
+  }, [useFallback]);
 
   return (
     <section ref={sectionRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-ki-ground">
@@ -36,7 +70,12 @@ export default function HeroSection() {
         <PigmentField animated={!quality.reducedMotion} />
       ) : (
         <Suspense fallback={<PigmentField animated={!quality.reducedMotion} />}>
-          <HeroCanvasBoundary quality={quality} lightTargetRef={sectionRef} />
+          <HeroCanvasBoundary
+            quality={quality}
+            lightTargetRef={sectionRef}
+            active={active}
+            onUnplayable={() => setGaveUp(true)}
+          />
         </Suspense>
       )}
 
