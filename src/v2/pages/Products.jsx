@@ -30,19 +30,28 @@ const Products = () => {
     <div className="min-h-screen bg-ki-paper pb-20" data-v2-tone="paper">
       <SEO
         title="Products"
-        description="Klassico Inks product catalog — ink series, processes, solvents, and printing ink industry products."
+        description="Ink series, processes, solvents, and printing ink industry products from Klassico Inks."
         path="/products"
       />
 
       <PageHeader
         tone="paper"
         title="Product Catalog"
-        description="Ink series, ink processes, solvents & blends, and printing ink industry products — pigments, titanium dioxide, resins, nitrocellulose, and solvent dyes."
+        description="Ink series, processes, solvents and blends, plus pigments, titanium dioxide, resins, nitrocellulose, and solvent dyes."
       />
 
       <div className="sticky top-16 z-40 bg-ki-paper/95 backdrop-blur border-b border-ki-green/15 shadow-sm">
         <Container>
-          <div className="flex overflow-x-auto space-x-2 py-4 no-scrollbar justify-center">
+          {/*
+            `safe center` centers the chips when they fit and falls back to
+            start-alignment when they do not. Plain `center` overflows a scroll
+            container on both sides, and the leading overflow is unreachable
+            because scrollLeft cannot go negative — on a phone that put "All
+            Products" ~250px off-screen with no way to scroll back to it.
+            Browsers without `safe` ignore the declaration and start-align,
+            which is the same safe outcome.
+          */}
+          <div className="flex overflow-x-auto space-x-2 py-4 no-scrollbar [justify-content:safe_center]">
             {categories.map((cat) => (
               <button
                 key={cat.id}

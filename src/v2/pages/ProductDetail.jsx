@@ -91,7 +91,7 @@ const ProductDetail = () => {
               <div className="rounded-2xl overflow-hidden border border-ki-green/15 aspect-video bg-white">
                 <ProductImage
                   image={imageSrc}
-                  alt={`${product.name} — application creative`}
+                  alt={`${product.name} packaging application`}
                   sizes="(min-width: 1024px) 60vw, 100vw"
                   priority
                   className="h-full w-full object-cover"

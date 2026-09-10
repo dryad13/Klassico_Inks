@@ -29,16 +29,16 @@ const Footer = () => {
         <div className="mb-12 py-8 border-b border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl font-bold font-heading text-white uppercase">
-              Subscribe our Newsletter
+              Subscribe to our newsletter
             </h3>
             <p className="text-slate-400 text-sm leading-[1.65]">
-              Stay updated with the latest in ink technology.
+              Product updates and notes from Klassico.
             </p>
           </div>
           <NetlifyForm
             name="newsletter"
             onSubmit={handleNewsletterSubmit}
-            successMessage="You're subscribed! Thank you for joining our newsletter."
+            successMessage="You're subscribed. Thanks for joining."
             className="flex w-full md:w-auto gap-2"
           >
             <input
@@ -58,8 +58,8 @@ const Footer = () => {
           <div>
             <Logo className="h-16 w-auto object-contain mb-4" />
             <p className="text-sm leading-[1.65] text-slate-400">
-              Leading manufacturer of industrial printing inks, solvents, and raw materials for
-              packaging and commercial print.
+              Rotogravure, flexo, water-based, and offset inks, plus solvents and raw materials for
+              packaging print.
             </p>
           </div>
 

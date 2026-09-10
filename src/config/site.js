@@ -1,7 +1,7 @@
 export const SITE_NAME = 'Klassico Inks';
 export const SITE_URL = 'https://klassicoinks.com';
 export const SITE_DESCRIPTION =
-  'Leading manufacturer of industrial printing inks — rotogravure, flexographic, water-based, and offset — plus solvents, pigments, resins, and related raw materials.';
+  'Rotogravure, flexographic, water-based, and offset inks, plus solvents, pigments, resins, and related raw materials for packaging print.';
 
 export const PHONE_MOBILE = '+923268413506';
 export const PHONE_MOBILE_DISPLAY = '+92 326 8413506';
@@ -13,7 +13,7 @@ export const EMAIL_SALES = 'sales@mahmoodbrothers.com.pk';
 
 export const WHATSAPP_NUMBER = '923268413506';
 export const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hello Klassico Inks, I would like to inquire about your printing ink solutions.'
+  'Hello Klassico Inks, I would like to ask about your printing inks.'
 );
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 

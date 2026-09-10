@@ -7,7 +7,7 @@ const CaseStudies = () => {
     <div className="min-h-screen bg-ki-ground pb-20">
       <SEO
         title="Case Studies"
-        description="Learn how Klassico Inks supports packaging printers. Contact us to discuss your application."
+        description="Customer print stories from Klassico Inks. Contact us about your application."
         path="/case-studies"
       />
 
@@ -15,7 +15,7 @@ const CaseStudies = () => {
         tone="dark"
         icon={TrendingUp}
         title="Case Studies"
-        description="Detailed customer case studies will be published here. In the meantime, explore our product catalog or contact sales about your application."
+        description="We will publish customer stories here. Until then, browse the catalog or talk to sales."
       />
 
       <Container className="py-16">

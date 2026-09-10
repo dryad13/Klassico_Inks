@@ -30,7 +30,7 @@ const Infrastructure = () => {
     <div className="min-h-screen bg-ki-ground pb-20">
       <SEO
         title="Manufacturing & Quality"
-        description="How Klassico Inks manufactures liquid printing inks — colour matching, batch consistency, and our Gadoon Amazai production facility."
+        description="How Klassico Inks makes liquid printing inks: colour matching, batch consistency, and our Gadoon Amazai plant."
         path="/infrastructure"
       />
 
@@ -54,10 +54,10 @@ const Infrastructure = () => {
             the shade for your process and substrate. Talk to us about turnaround for your job.
           </Capability>
 
-          <Capability icon={Boxes} title="Breadth of Supply">
-            Solvent-based rotogravure and flexographic inks, water-based inks, and offset inks —
-            alongside the solvents, pigments, titanium dioxide, resins, nitrocellulose, and solvent
-            dyes used to make them.
+          <Capability icon={Boxes} title="What we supply">
+            Solvent-based rotogravure and flexographic inks, water-based inks, and offset inks,
+            plus the solvents, pigments, titanium dioxide, resins, nitrocellulose, and solvent dyes
+            used to make them.
           </Capability>
         </div>
 

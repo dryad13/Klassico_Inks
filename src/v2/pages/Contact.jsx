@@ -64,14 +64,14 @@ const Contact = () => {
     <div className="min-h-screen bg-ki-ground pb-20">
       <SEO
         title="Contact"
-        description="Contact Klassico Inks for quotes, technical support, and color matching."
+        description="Quotes, shade matching, and technical questions."
         path="/contact"
       />
 
       <PageHeader
         tone="dark"
-        title="Get in Touch"
-        description="Have a technical question or need a quote? Our team is ready to assist you."
+        title="Contact"
+        description="Need a quote or a shade match? Email, call, or use the form."
       />
 
       <Container className="py-16">

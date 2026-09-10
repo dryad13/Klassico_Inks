@@ -16,7 +16,7 @@ const rawMaterials = [
     imageSlug: 'pigments',
     to: '/products/pigments',
     blurb:
-      'Vivid and custom colour for ink manufacture — a diverse pigment range for the shade your job needs.',
+      'Colour pigments for ink making. Pick the shade your job needs, including custom matches.',
   },
   {
     id: 'resins',
@@ -24,7 +24,7 @@ const rawMaterials = [
     imageSlug: 'resins',
     to: '/products/resins',
     blurb:
-      'Binder systems that strengthen durability, adhesion, and flexibility for long-lasting print.',
+      'Binders for adhesion, rub resistance, and flexibility on film and board.',
   },
   {
     id: 'solvents',
@@ -32,7 +32,7 @@ const rawMaterials = [
     imageSlug: 'solvents-blends',
     to: '/products/solvents-blends',
     blurb:
-      'Solvents and blends that keep ink flowing consistently across gravure, flexo, and related processes.',
+      'Solvents and blends for gravure and flexo so viscosity and drying stay under control.',
   },
   {
     id: 'additives',
@@ -40,25 +40,25 @@ const rawMaterials = [
     imageSlug: 'nitrocellulose',
     to: '/products?category=industry-products',
     blurb:
-      'Fine-tune drying time, viscosity, and adhesion with materials built for press performance.',
+      'Materials to adjust drying, viscosity, and adhesion for how the press actually runs.',
   },
 ];
 
 const processSteps = [
   {
     step: '01',
-    title: 'Exploration',
-    body: 'We dig into ingredients and formulations first — matching chemistry to your substrate, structure, and end market before a shade is locked.',
+    title: 'Brief',
+    body: 'We start with your substrate, structure, and end market, then choose the chemistry before locking a shade.',
   },
   {
     step: '02',
-    title: 'Development',
-    body: 'The lab fine-tunes the composition for colour strength, adhesion, and press behaviour — against a printed pack, wet sample, or Pantone reference.',
+    title: 'Lab match',
+    body: 'The lab adjusts strength, adhesion, and press behaviour against a printed pack, wet sample, or Pantone.',
   },
   {
     step: '03',
     title: 'Production',
-    body: 'Approved formulations move into manufacture with tight batch control, so what you approved in the lab is what arrives on press.',
+    body: 'Once you approve the match, we manufacture with batch control so the lab shade is what arrives on press.',
   },
 ];
 
@@ -67,7 +67,7 @@ const Home = () => {
     <div className="flex flex-col">
       <SEO
         path="/"
-        description="Klassico Inks — colour that holds on the pack. Rotogravure, flexographic, water-based, and offset inks for packaging."
+        description="Klassico Inks. Colour that holds on the pack. Rotogravure, flexographic, water-based, and offset inks for packaging."
       />
 
       <Hero />
@@ -82,8 +82,7 @@ const Home = () => {
               Pigments, resins, solvents, and additives
             </h2>
             <p className="mt-4 text-slate-600 leading-[1.65] text-lg">
-              The building blocks behind every Klassico series — chosen for colour strength and press
-              performance.
+              The same materials we put into our own ink series.
             </p>
           </div>
 
@@ -163,7 +162,7 @@ const Home = () => {
               </h2>
               <p className="text-slate-600 leading-[1.65] text-lg max-w-xl">
                 Send a wet sample, printed pack, or Pantone reference. We match the shade for your
-                process — flexible film, PET, corrugated, or offset.
+                process: flexible film, PET, corrugated, or offset.
               </p>
             </div>
 
@@ -197,7 +196,7 @@ const Home = () => {
               How we work
             </h2>
             <p className="mt-4 text-slate-300 leading-[1.65] text-lg">
-              From first formulation to the batch on your press — three steps, one shade.
+              From lab match to production batch in three steps.
             </p>
           </div>
 
@@ -236,7 +235,7 @@ const Home = () => {
             Ready for the right series?
           </h2>
           <p className="text-slate-300 mb-10 text-lg max-w-xl mx-auto leading-[1.65]">
-            Tell us your substrate and application — or send a sample to match.
+            Tell us your substrate and application, or send a sample to match.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button

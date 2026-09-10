@@ -71,8 +71,10 @@ const FAQ = () => {
         ))}
 
         <Card tone="paper" className="mt-12 p-8 text-center">
-          <h3 className="text-xl font-bold text-ki-ground mb-2">Still have questions?</h3>
-          <p className="text-slate-600 mb-6 leading-[1.65]">Our technical team is ready to help.</p>
+          <h3 className="text-xl font-bold text-ki-ground mb-2">Still stuck?</h3>
+          <p className="text-slate-600 mb-6 leading-[1.65]">
+            Ask sales or technical with your substrate and process details.
+          </p>
           <Button to="/contact">Contact Us</Button>
         </Card>
       </Container>

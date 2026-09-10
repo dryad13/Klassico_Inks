@@ -102,12 +102,12 @@ export default function HeroContent() {
         transition={reduceMotion ? { duration: 0 } : { delay: BASE_DELAY + 0.42, duration: 0.5 }}
       >
         <p className="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-[1.65] mb-4">
-          Rotogravure, flexographic, water-based, and offset inks — matched to your substrate
+          Rotogravure, flexographic, water-based, and offset inks matched to your substrate
           and end market.
         </p>
 
         <p className="font-mono text-xs md:text-sm text-slate-400 tracking-wide mb-10">
-          Seven series · one for every pack
+          Seven series for packaging print
         </p>
 
         <HeroCtas />
